@@ -1,0 +1,440 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 20px;
+}
+body {
+    background-color:#0E2337;
+}
+.menu {
+    position: fixed;
+    top: 2.5rem;
+    left: 2.5rem;
+    height: 0px;
+    width: 0px;
+    background-color:#FFCC23;
+    border-radius: .5rem;
+    z-index: 10;
+    transition: all .3s ease-in-out;
+}
+.menu-inner{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 20%;
+    display: none;
+    list-style: none;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 500%;
+    color: #fff;
+    z-index: 11;
+}
+.menu-inner li {
+    background-color:#0e2337;
+    width: 100%;
+    transition: all .7s linear;
+}
+.menu-inner li:hover {
+    color: #000;
+    background-color: #fff;
+}
+.menu-inner a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: .5rem;
+    color: #fff;
+}
+.icon{
+    position: fixed;
+    top: 2.5rem;
+    left: 2.5rem;
+    font-family: 'icomoon';
+    font-size: 1.5rem;
+    color: #fff;
+    transition: all .3s linear;
+    z-index: 999;
+}
+.nav {
+    position: absolute;
+    width: 30%;
+    right: 5rem;
+    top: 10rem;
+    margin-top: -1.25rem;
+    font-size:1rem;
+    font-weight: bold;
+}
+.nav li{
+    width: 6rem;
+    height: 1.75rem;
+    list-style: none;
+    display: inline-block;
+}
+.box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .4s linear;
+    border: none;
+    
+}
+.box:hover{
+    transform: rotateX(90deg);
+}
+.front,
+.bottom{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: .25rem;
+    text-align: center;
+    line-height: 1.75rem;
+    font-weight: 600;
+    
+}
+.front {
+    z-index: 1;
+    transform: translateZ(17.5px);
+    color:#43E185;
+    font-family: 'Noto Sans TC';
+}
+.front a , .bottom a {
+    color:#43E185;
+}
+.bottom{
+    /* background-color: ; */
+    transform: translateY(17.5px) rotateX(-90deg) ;
+    color:#43E185;
+    font-family:  "Trirong","Muli","Helvetica Neue","Yu Gothic",YuGothic,"ヒラギノ角ゴ ProN W3",Hiragino Kaku Gothic ProN,Arial,"メイリオ",Meiryo,"Sawarabi Gothic",sans-serif;
+}
+.all-icon {
+    position: fixed;
+    display: none;
+    right: 5rem;
+    bottom: 2rem;
+    z-index: 11;
+}
+.all-icon li {
+    position: relative;
+    display: inline-block;
+    font-family: 'icomoon';
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+    border-radius: 1.25rem;
+    transition: all .7s linear ;
+    z-index: 999;
+}
+.all-icon i {
+    position: absolute;
+    left: 50%;
+    color: #fff !important;
+    transform: translate(-50%);
+    z-index: 999;
+    transition: all .7s linear ;
+}
+.light_1 {
+    position: absolute;
+    right: 10rem;
+    bottom: 10rem;
+    width: 10rem;
+    height: 10rem;
+    transform: rotate(180deg);
+    background: url(../picture/燈泡去背4.gif) no-repeat ;
+    background-size: 100%;
+    z-index: 1;
+}
+.light_2 {
+    position: fixed;
+    width: 200px;
+    height: 113px;
+    right: 0;
+    top: 1rem;
+    background: url(../picture/燈泡去背1.gif) no-repeat;
+    transform: scale(1.2);
+    background-size: 100%;
+}
+.light_2::after {
+    content: '';
+    position: fixed;
+    background: url(../picture/燈泡去背1.gif) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    right: 18rem;
+}
+.light_2::before {
+    content: '';
+    position: fixed;
+    background: url(../picture/燈泡去背1.gif) no-repeat;
+    width: 100%;
+    height: 100%;
+    right: 9rem;
+}
+.light_3 {
+    position: fixed;
+    top: -20rem;
+    left: 5%;
+    width: 360px;
+    height: 400px;
+    background: url(../picture/燈泡去背3.gif) no-repeat;
+    background-size: 100%;
+    z-index: 1;
+    opacity: .9;
+    transition: all .5s linear;
+    cursor: pointer;
+}
+.string {
+    position: fixed;
+    left: 5%;
+    top: 0;
+    width: 15rem;
+    height: 15rem;
+    background: url(../picture/繩子去背.png);
+    z-index: 2;
+    cursor: pointer;
+    transition: all .5s linear;
+}
+.light_4 {
+    position: fixed;
+    width: 500px;
+    height: 318px;
+    right: 0;
+    bottom: 10rem;
+    background: url(../picture/燈泡去背2.gif) no-repeat;
+    background-size: 100%;
+    transform: rotate(65deg);
+}
+.dog {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 25rem;
+    height: 25rem;
+    background: url(./picture/狗的影子去背.gif) no-repeat right bottom;
+    background-size: 100%;
+    z-index: 2;
+}
+.container {
+    margin: 0 auto;
+    margin-top: 20rem;
+    width: 80%;
+}
+.container_header {
+    height: 30rem;
+}
+.container_content {
+    height: 30rem;
+}
+.container_content_left {
+    height: 100%;
+}
+.container_content_left img , .container_content_right img{
+    position: absolute;
+    left: 50%;
+    width: 25rem;
+    height: 25rem;
+    transform:translate(-50%);
+}
+.container_content_left img:first-child {
+    transform:translate(-50%) scale(1.2);
+}
+.container_content_right {
+    height: 100%;
+}
+.container_content_top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 25%;
+    width: 100%;
+    line-height: 7.5rem;
+    text-align: center;
+    font-size: 3rem;
+    color: #FFCC23;
+    border-bottom: 1px solid #fff;
+    font-family: 'Shadows Into Light', cursive;
+}
+.container_content_top .light:nth-child(1) {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10rem;
+    height: 10rem;
+    background: url(../picture/燈泡去背4.gif) no-repeat;
+    background-size: 100%;
+}
+.container_content_top .light:nth-child(2) {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10rem;
+    height: 10rem;
+    background: url(../picture/燈泡去背4.gif) no-repeat;
+    background-size: 100%;
+}
+.container_content_bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 75%;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    border-radius: 1rem;
+    color: #fff;
+    box-sizing: border-box;
+    padding-top: 2rem;
+    z-index: 1;
+}
+.interest {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.interest_top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    line-height: 15rem;
+    font-size: 5rem;
+    font-weight: 500;
+    font-family: 'Shadows Into Light', cursive;
+    text-align: center;
+    color:  #FFCC23;
+}
+.interest_bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    height: 50%;
+    line-height: 15rem;
+    border-top:.2rem dashed #FFCC23;
+}
+@media screen and (max-width: 1500px) {
+    .nav {
+       left: 50%;
+       transform: translate(-50%);
+       top: 13rem;
+       z-index: 10;
+    }
+    .menu-inner {
+        width: 15rem;
+    }
+    .all-icon {
+        right: 1rem;
+    }
+    .dog {
+        display: none;
+    }
+    .container {
+        width: 100%;
+    }
+} 
+@media screen and (max-width: 1100px) {
+    .all-icon li {
+        display: block;
+    }
+}
+@media screen and (min-width: 750px) {
+    .nav {
+        width: 500px!important;
+    }
+}
+@media screen and (max-width:749px) {
+    .nav {
+        width: 500px; 
+        z-index: 2;
+        left: 50%;
+        transform: translate(-50%) ;
+    }
+    .nav li{
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        height: 70px;
+    }
+    .menu-inner li {
+        background-color: transparent;
+        color: #000;
+    }
+    .menu-inner {
+        width: 300px !important; 
+        left: 50%;
+        margin-left: 250px;
+    }
+    .all-icon {
+        left: 50%;
+        transform: translate(-50%) ;
+        width: 14rem;
+        text-align: center;
+        bottom: 0;
+        z-index: 999;
+    }
+    .all-icon li {
+        width: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        border-radius:1rem;
+        display: inline-block;
+    }
+    .menu {
+        border-radius: 0px;
+    }
+    .light_3 {
+        display: none;
+    }
+    .string {
+        display: none;
+    }
+    .dog {
+        display: none;
+    }
+    .container {
+        display: none;
+    }
+}
+@media screen and (max-width:500px) {
+    .nav {
+        width: 250px; 
+        transform: translate(-50%) ;
+    }
+    .all-icon {
+        transform: translate(-50%) ;
+        width: 12rem;
+        
+    }
+    .all-icon li {
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        border-radius: .75rem;
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:300px) {
+    .menu-inner {
+        width: 280px !important; 
+    }
+
+} 

@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 20px;
+}
+body {
+    background-color:#fff;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: -30%;
+    height: 100%;
+    width: 30%;
+    background-color:#6A9489;
+    border-radius: .5rem;
+    z-index: 2;
+    transition: all .3s ease-in-out;
+}
+.menu_iocn {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-family: 'icomoon';
+    font-size: 1.5rem;
+    color: #fff;
+    transition: all .3s linear;
+    z-index:1;
+}
+.menu-inner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%) translateY(-50%);
+    width: 40%;
+    display: none;
+    list-style: none;
+    text-align: center;
+    line-height: 500%;
+    font-size: 1rem;
+    font-weight: 600;
+    color:#fff;
+    z-index: 11;
+}
+.menu-inner li {
+    margin: 0 auto;
+    width: 100%;
+    transition: all .7s linear;
+}
+.menu-inner li:hover {
+    color: #000;
+    border-bottom: #000 1px solid;
+}
+.menu-inner a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
+.icon{
+    position: fixed;
+    top: 2.5rem;
+    left: 2.5rem;
+    font-family: 'icomoon';
+    font-size: 1.5rem;
+    color: #A39681;
+    transition: all .3s linear;
+    z-index: 1;
+}
+.nav {
+    position: absolute;
+    width: 30%;
+    right: 10rem;
+    top: 10rem;
+    margin-top: -1.25rem;
+    font-size:1rem;
+    font-weight: bold;
+    min-width: 25rem;
+}
+.nav li{
+    display: inline-block;
+    width: 6rem;
+    height: 1.75rem;
+    list-style: none;
+}
+.box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all .4s linear;
+    border: none;
+    
+}
+.box:hover{
+    transform: rotateX(90deg);
+}
+.front,
+.bottom{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: .25rem;
+    text-align: center;
+    line-height: 1.75rem;
+    font-weight: 600;
+    
+}
+.front a , .bottom a{
+    color: #000;
+}
+.front {
+    z-index: 1;
+    transform: translateZ(17.5px);
+    color:#00A88C;
+    font-family: 'Noto Sans TC';
+}
+.bottom{
+    /* background-color: ; */
+    transform: translateY(17.5px) rotateX(-90deg) ;
+    color:#00A88C;
+    font-family:  "Trirong","Muli","Helvetica Neue","Yu Gothic",YuGothic,"ヒラギノ角ゴ ProN W3",Hiragino Kaku Gothic ProN,Arial,"メイリオ",Meiryo,"Sawarabi Gothic",sans-serif;
+}
+.all-icon {
+    position: absolute;
+    display: none;
+    left: 50%;
+    transform: translate(-50%);
+    width: 16rem;
+    bottom: 2rem;
+    z-index: 999;
+}
+.all-icon li {
+    position: relative;
+    display: inline-block;
+    font-family: 'icomoon';
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+    border-radius: 1.25rem;
+    transition: all .7s linear ;
+    z-index: 999;
+}
+.all-icon i {
+    position: absolute;
+    left: 50%;
+    color: #fff !important;
+    transform: translate(-50%);
+    z-index: 999;
+    transition: all .7s linear ;
+}
+.container {
+    margin: 0 auto;
+    margin-top: 20rem;
+}
+.container_content {
+    height: 20rem;
+}
+.container_content_left {
+    color:#00A88C;
+    font-family: 'Noto Sans TC';
+    text-align: center;
+    height: 100%;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.container_content_right {
+    color:#0F1145;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 2rem;
+    height: 100%;
+    font-family:'Noto Sans TC';
+}
+.inner {
+    height: 100%;
+}
+.container_content_header  {
+    height: 100%;
+}
+.container_content_header_left {
+    height: 100%;
+}
+.container_content_header_right {
+    position: relative;
+    height: 100%;
+}
+.container_content_header_right img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    height: 18rem;
+    width: 18rem;
+}
+.header_left_top {
+    height: 40%;
+    color: #0F1145;
+    text-align: center;
+    font-weight: bold;
+    line-height: 8rem;
+    font-size: 5rem;
+    font-family:'Shadows Into Light', cursive;
+}
+.header_left_bottom {
+    height: 60%;
+    line-height: 12rem;
+    font-size: 3rem;
+    text-align: center;
+    font-family:'Noto Sans TC';
+}
+@media screen and (min-width: 1500px) {
+    .container {
+        width: 1500px;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .nav {
+       left: 50%;
+       transform: translate(-50%);
+       top: 13rem;
+       z-index: 10;
+    }
+    .menu-inner {
+        width: 15rem;
+    }
+} 
+@media screen and (max-width: 1300px) {
+    .container_content_left {
+        text-align: left;
+        height: 20%;
+    }
+    .container_content_right {
+        height: 50%;
+    }
+    .inner {
+        width: 25%;
+    }
+    .skill {
+       display: flex;
+       justify-content:left;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .all-icon{
+        width: 2.5rem;
+        left: auto;
+        bottom: 0;
+        right: 0 ;
+    }
+    .container {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .header_left_top {
+        width: 100%;
+        font-size: 4rem;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width:749px) {
+    .all-icon {
+        left: 50%;
+        transform: translate(-50%) ;
+        width: 16rem;
+        text-align: center;
+        z-index: 999;
+    }
+    .container {
+        margin-top: 5rem;
+    }
+    .header_left_top {
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width:500px) {
+    .nav {
+        min-width: 15rem;
+        width: 100%;
+        font-size: .5rem;    
+    }
+    .nav li {
+        width:24%;
+    }
+    .header_left_top {
+        font-size: 1.5rem;
+    }
+    .all-icon {
+        width: 142rem;
+    }
+    .all-icon li {
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.5rem;
+        border-radius: .75rem;
+        font-size: 1rem;
+    }
+    .inner {
+        font-size: .5rem;
+    }
+}
+@media screen and (max-width:300px) {
+    .menu-inner {
+        width: 280px !important; 
+    }
+    .header_left_top {
+        font-size: 1rem;
+    }
+    .nav li {
+        width:24.16%;
+    }
+} 
